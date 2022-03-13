@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header{
+    width: 100%;
+    height: 100px;
+    background: #802434;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4); 
+}
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.logo{
+    float: left;
+    line-height: 75px;
+}
+
+.titulo h4{
+    color: #fff;
+    font-weight: 300px;
+    font-size: 24px;
+    cursor: default;
+    margin-top: 2.7%;
+    margin-left: 5%;
+}
+
+.logo img{
+    width: 50px;
+    height: 50px;
+    margin-top: 50%;
+}
+
+.menu{
+    float: right;
+    line-height: 75px;
+    margin-top: -5%;
+}
+
+.menu a{
+    color:#fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 15px;
+    line-height: normal;
+    transition: all 500ms ease;
+    border-bottom: 4px solid;
+}
+
+.menu a:hover{
+    color: cyan;
+    border-bottom: 4px solid cyan;
+}
+
+.barra{
+    width: 100%;
+    max-width: 55px;
+    position: fixed;
+    left: 0;
+    top: 18%;
+}
+
+.barra a{
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 17px;
+    position: relative;
+    transition: all 500ms ease;
+    color: #fff;
+}
+
+.barra a:hover{
+    background: #802434;
+}
+
+.barra .icon-facebook{
+    background: #3b5998;
+}
+
+.barra .icon-twitter{
+    background: #00acee;
+}
+
+.barra .icon-instagram{
+    background: #c13584;
+}
+
+.barra .icon-youtube-play{
+    background: #e52a23;
+}
+
+.barra #texto{
+    position: fixed;
+    background: #802434;
+    padding: 6px;
+    border-radius: 3px;
+    font-size: 15px;
+    margin-top: -4px;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.barra a:hover #texto{
+    opacity: 0;
+    visibility: visible;
+    margin-left: 30px;
+}
+
+.barra #texto::after{
+    position: absolute;
+    content: '';
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    right: 100%;
+    top: 9px;
+    color: #fff;
+}
+
+#btn-social{
+    display: none;
+}
+
+.icon-list{
+    cursor: pointer;
+    transition: all 0.4s;
+    font-size: 30px;
+    margin-bottom: 12px;
+    display: inline-block;
+    transform: rotate(180deg);
+    color: black;
+}
+
+#btn-social:checked ~.icon-list{
+    transform: rotate(0deg);
+}
+
+.icon-social{
+    transition: all 0.4s;
+    transform: translateX(0%);
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+}
+
+#btn-social:checked ~ .icon-social{
+    transform: translateX(-100%);
+}
+
+section{
+    margin-left: 5%;
+}
+
+#footer{
+    position: relative;
+    width: 100%;
+    height: 205px;
+    bottom: 0;
+    left: 0;
+}
